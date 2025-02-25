@@ -1,0 +1,43 @@
+<!DOCTYPE html>ž
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test za daltonizam</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Ishihara Test za Daltonizam</h1>
+    <p>Odaberite broj koji vidite na slici:</p>
+    <img src="ishihara_test.jpeg" alt="Ishihara test" id="test-slika">
+    <input type="text" id="korisnikov-odgovor" placeholder="Unesite broj">
+    <br>
+    <button onclick="provjeriOdgovor()">Dalje</button>
+    <p id="rezultat"></p>
+
+    <!-- Gumb za spremanje rezultata -->
+    <button id="spremi-rezultat" onclick="prikaziFormu()">Spremi rezultat</button>
+    <br>
+    <br>
+    <div id="forma" style="display:none;">
+        <label for="spol">Odaberite spol:</label>
+        <select id="spol">
+            <option value="muško">Muško</option>
+            <option value="žensko">Žensko</option>
+            <option value="drugo">Drugo</option>
+        </select>
+
+        <p>Je li ijedan od roditelja patio od daltonizma?</p>
+        <label><input type="radio" name="daltonizam-roditelji" value="da"> Da</label>
+        <label><input type="radio" name="daltonizam-roditelji" value="ne"> Ne</label>
+<br>
+<br>
+        <button onclick="spremiPodatke()">Pošalji</button>
+        <br>
+    </div>
+    <!-- Gumb za prikaz statistike -->
+    <button onclick="prikaziStatistiku()">Prikaz statistike</button>
+    <div id="statistika"></div>
+    <script src="script.js"></script>
+</body>
+</html>
